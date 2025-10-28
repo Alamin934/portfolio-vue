@@ -1,134 +1,59 @@
+<script setup>
+import { Download, Folder, Github, Facebook, Linkedin } from 'lucide-vue-next';
+</script>
 <template>
+   <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20" id="home">
+      <div class="absolute inset-0 bg-gradient-to-br from-[#0a0118] via-[#1a0a2e] to-[#0a0118]"></div>
+      <div class="absolute top-20 right-20 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 left-20 w-96 h-96 bg-violet-600/20 rounded-full blur-3xl"></div>
 
-   <section class="text-gray-600 body-font" id="home">
-      <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-         <div
-            class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
-               <br class="hidden lg:inline-block">readymade gluten
-            </h1>
-            <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant
-               cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic
-               tumeric truffaut hexagon try-hard chambray.</p>
-            <div class="flex justify-center">
-               <button
-                  class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-               <button
-                  class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+      <div class="max-w-7xl mx-auto px-6 py-20 relative z-10">
+         <div class="grid md:grid-cols-2 gap-12 items-center">
+            <!-- Left Item -->
+            <div class="">
+               <p class="text-purple-400 mb-2">Hi, I'm Al-Amin</p>
+               <h1 class="text-5xl md:text-6xl mb-4">
+                  <span
+                     class="bg-gradient-to-r from-purple-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">Wordpress
+                     & Laravel</span> Developer
+               </h1>
+               <p class="text-gray-400 mb-8 leading-relaxed max-w-lg">I build responsive, high-performing websites using
+                  modern
+                  web technologies.</p>
+               <div class="flex flex-wrap gap-4 mb-8">
+                  <button
+                     class="px-8 py-4 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 rounded-md shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 trasition-all flex items-center gap-2 cursor-pointer">
+                     <Folder /> My
+                     Projects
+                  </button>
+                  <button
+                     class="px-8 py-4 border-2 border-purple-500/50 rounded-md hover:bg-purple-500/10 trasition-all flex items-center gap-2 cursor-pointer">
+                     <Download /> Download
+                     CV
+                  </button>
+               </div>
+               <div class="flex flex-wrap gap-4">
+                  <a href=""
+                     class="w-12 h-12 rounded-lg bg-black/5 hover:bg-purple-500/20 border border-purple-500/20 flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all hover:shadow-lg hover:shadow-purple-500/30">
+                     <Github />
+                  </a>
+                  <a href=""
+                     class="w-12 h-12 rounded-lg bg-black/5 hover:bg-purple-500/20 border border-purple-500/20 flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all hover:shadow-lg hover:shadow-purple-500/30">
+                     <Linkedin />
+                  </a>
+                  <a href=""
+                     class="w-12 h-12 rounded-lg bg-black/5 hover:bg-purple-500/20 border border-purple-500/20 flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all hover:shadow-lg hover:shadow-purple-500/30">
+                     <Facebook />
+                  </a>
+               </div>
             </div>
-         </div>
-         <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
-         </div>
-      </div>
-   </section>
-   <section class="text-gray-600 body-font" id="services">
-      <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-         <div
-            class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
-               <br class="hidden lg:inline-block">readymade gluten
-            </h1>
-            <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant
-               cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic
-               tumeric truffaut hexagon try-hard chambray.</p>
-            <div class="flex justify-center">
-               <button
-                  class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-               <button
-                  class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+            <!-- Right Item -->
+            <div class="relative flex justify-end items-center">
+               <div
+                  class="relative inline-block border-2 border-purple-500/30 rounded-3xl shadow-2xl shadow-purple-500/20 overflow-hidden md:w-5/6 w-full h-auto">
+                  <img class="relative z-10 w-full h-auto object-cover" alt="Hero Avatar" src="@/assets/images/me.png">
+               </div>
             </div>
-         </div>
-         <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
-         </div>
-      </div>
-   </section>
-   <section class="text-gray-600 body-font" id="projects">
-      <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-         <div
-            class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
-               <br class="hidden lg:inline-block">readymade gluten
-            </h1>
-            <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant
-               cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic
-               tumeric truffaut hexagon try-hard chambray.</p>
-            <div class="flex justify-center">
-               <button
-                  class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-               <button
-                  class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
-            </div>
-         </div>
-         <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
-         </div>
-      </div>
-   </section>
-   <section class="text-gray-600 body-font" id="skills">
-      <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-         <div
-            class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
-               <br class="hidden lg:inline-block">readymade gluten
-            </h1>
-            <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant
-               cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic
-               tumeric truffaut hexagon try-hard chambray.</p>
-            <div class="flex justify-center">
-               <button
-                  class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-               <button
-                  class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
-            </div>
-         </div>
-         <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
-         </div>
-      </div>
-   </section>
-   <section class="text-gray-600 body-font" id="testimonials">
-      <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-         <div
-            class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
-               <br class="hidden lg:inline-block">readymade gluten
-            </h1>
-            <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant
-               cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic
-               tumeric truffaut hexagon try-hard chambray.</p>
-            <div class="flex justify-center">
-               <button
-                  class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-               <button
-                  class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
-            </div>
-         </div>
-         <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
-         </div>
-      </div>
-   </section>
-   <section class="text-gray-600 body-font" id="contact">
-      <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-         <div
-            class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
-               <br class="hidden lg:inline-block">readymade gluten
-            </h1>
-            <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant
-               cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic
-               tumeric truffaut hexagon try-hard chambray.</p>
-            <div class="flex justify-center">
-               <button
-                  class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-               <button
-                  class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
-            </div>
-         </div>
-         <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
          </div>
       </div>
    </section>

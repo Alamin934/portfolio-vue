@@ -30,22 +30,22 @@ function scrollToElement(id) {
             </div>
          </div>
          <!-- Menu -->
-         <nav class="hidden md:flex">
+         <nav class="hidden md:flex items-center gap-8">
             <button @click="scrollToElement('home')"
-               class="px-3 text-gray-300 hover:text-white cursor-pointer">Home</button>
+               class="text-gray-300 hover:text-white transition-colors cursor-pointer">Home</button>
             <button @click="scrollToElement('services')"
-               class="px-3 text-gray-300 hover:text-white cursor-pointer">Services</button>
+               class="text-gray-300 hover:text-white transition-colors cursor-pointer">Services</button>
             <button @click="scrollToElement('projects')"
-               class="px-3 text-gray-300 hover:text-white cursor-pointer">Projects</button>
+               class="text-gray-300 hover:text-white transition-colors cursor-pointer">Projects</button>
             <button @click="scrollToElement('skills')"
-               class="px-3 text-gray-300 hover:text-white cursor-pointer">Skills</button>
+               class="text-gray-300 hover:text-white transition-colors cursor-pointer">Skills</button>
             <button @click="scrollToElement('testimonials')"
-               class="px-3 text-gray-300 hover:text-white">Testimonials</button>
+               class="text-gray-300 hover:text-white transition-colors cursor-pointer">Testimonials</button>
          </nav>
          <!-- Contact Button -->
          <div class="hidden md:block">
             <button @click="scrollToElement('contact')"
-               class="py-3 px-4 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 rounded-md shadow-md shadow-purple-500/50 hover:shadow-purple-500/70 cursor-pointer transition-all w-full">Contact
+               class="py-3 px-6 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 rounded-md shadow-md shadow-purple-500/50 hover:shadow-purple-500/70 cursor-pointer transition-all w-full">Contact
                Me</button>
          </div>
          <!-- Mobile Menu Button -->
@@ -69,7 +69,7 @@ function scrollToElement(id) {
                class="px-3 text-gray-300 hover:text-white">Testimonials</button>
          </nav>
          <button @click="scrollToElement('contact')"
-            class="mt-10 d-block py-3 px-4 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 rounded-md shadow-md shadow-purple-500/50 hover:shadow-purple-500/70 cursor-pointer transition-all w-full">Contact
+            class="mt-10 d-block py-3 px-6 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 rounded-md shadow-md shadow-purple-500/50 hover:shadow-purple-500/70 cursor-pointer transition-all w-full">Contact
             Me</button>
       </div>
    </header>
