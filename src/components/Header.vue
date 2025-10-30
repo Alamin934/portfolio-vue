@@ -1,9 +1,9 @@
 <script setup>
+import { useCommonStore } from '@/stores/common';
 import { Menu as MenuIcon, X as XIcon } from 'lucide-vue-next';
 import { onMounted, onUnmounted, ref } from 'vue';
 import { RouterLink } from 'vue-router';
 
-let isMobileMenuOpen = ref(false);
 let isWindowScroll = ref(false);
 
 function handleScroll() {
@@ -12,11 +12,7 @@ function handleScroll() {
 onMounted(() => window.addEventListener('scroll', handleScroll));
 onUnmounted(() => window.removeEventListener('scroll', handleScroll));
 
-function scrollToElement(id) {
-   let targetedElement = document.getElementById(id);
-   targetedElement.scrollIntoView({ behavior: 'smooth' });
-   isMobileMenuOpen.value = false;
-}
+const common = useCommonStore();
 </script>
 <template>
    <header
@@ -31,44 +27,45 @@ function scrollToElement(id) {
          </div>
          <!-- Menu -->
          <nav class="hidden md:flex items-center gap-8">
-            <button @click="scrollToElement('home')"
+            <button @click="common.scrollToElement('home')"
                class="text-gray-300 hover:text-white transition-colors cursor-pointer">Home</button>
-            <button @click="scrollToElement('services')"
+            <button @click="common.scrollToElement('services')"
                class="text-gray-300 hover:text-white transition-colors cursor-pointer">Services</button>
-            <button @click="scrollToElement('projects')"
+            <button @click="common.scrollToElement('projects')"
                class="text-gray-300 hover:text-white transition-colors cursor-pointer">Projects</button>
-            <button @click="scrollToElement('skills')"
+            <button @click="common.scrollToElement('skills')"
                class="text-gray-300 hover:text-white transition-colors cursor-pointer">Skills</button>
-            <button @click="scrollToElement('testimonials')"
+            <button @click="common.scrollToElement('testimonials')"
                class="text-gray-300 hover:text-white transition-colors cursor-pointer">Testimonials</button>
          </nav>
          <!-- Contact Button -->
          <div class="hidden md:block">
-            <button @click="scrollToElement('contact')"
+            <button @click="common.scrollToElement('contact')"
                class="py-3 px-6 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 rounded-md shadow-md shadow-purple-500/50 hover:shadow-purple-500/70 cursor-pointer transition-all w-full">Contact
                Me</button>
          </div>
          <!-- Mobile Menu Button -->
-         <button class="block md:hidden" @click="isMobileMenuOpen = !isMobileMenuOpen">
-            <component :is="isMobileMenuOpen ? XIcon : MenuIcon" :size="24" />
+         <button class="block md:hidden" @click="common.isMobileMenuOpen = !common.isMobileMenuOpen">
+            <component :is="common.isMobileMenuOpen ? XIcon : MenuIcon" :size="24" />
          </button>
          <!-- Mobile Menu -->
       </div>
 
-      <div v-if="isMobileMenuOpen" class="px-6 py-4 bg-[#0a0118]/95 border-t border-purple-500/20 backdrop-blur-lg">
+      <div v-if="common.isMobileMenuOpen"
+         class="px-6 py-4 bg-[#0a0118]/95 border-t border-purple-500/20 backdrop-blur-lg min-h-screen ">
          <nav class="flex flex-col gap-4">
-            <button @click="scrollToElement('home')"
-               class="px-3 text-gray-300 hover:text-white cursor-pointer">Home</button>
-            <button @click="scrollToElement('services')"
-               class="px-3 text-gray-300 hover:text-white cursor-pointer">Services</button>
-            <button @click="scrollToElement('projects')"
-               class="px-3 text-gray-300 hover:text-white cursor-pointer">Projects</button>
-            <button @click="scrollToElement('skills')"
-               class="px-3 text-gray-300 hover:text-white cursor-pointer">Skills</button>
-            <button @click="scrollToElement('testimonials')"
-               class="px-3 text-gray-300 hover:text-white">Testimonials</button>
+            <button @click="common.scrollToElement('home')"
+               class="text-gray-300 hover:text-white transition-colors cursor-pointer text-left">Home</button>
+            <button @click="common.scrollToElement('services')"
+               class="text-gray-300 hover:text-white transition-colors cursor-pointer text-left">Services</button>
+            <button @click="common.scrollToElement('projects')"
+               class="text-gray-300 hover:text-white transition-colors cursor-pointer text-left">Projects</button>
+            <button @click="common.scrollToElement('skills')"
+               class="text-gray-300 hover:text-white transition-colors cursor-pointer text-left">Skills</button>
+            <button @click="common.scrollToElement('testimonials')"
+               class="text-gray-300 hover:text-white transition-colors cursor-pointer text-left">Testimonials</button>
          </nav>
-         <button @click="scrollToElement('contact')"
+         <button @click="common.scrollToElement('contact')"
             class="mt-10 d-block py-3 px-6 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 rounded-md shadow-md shadow-purple-500/50 hover:shadow-purple-500/70 cursor-pointer transition-all w-full">Contact
             Me</button>
       </div>
