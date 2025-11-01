@@ -22,7 +22,7 @@ const common = useCommonStore();
                      & Laravel</span>
                   Developer
                </h1>
-               <p class="text-gray-400 mb-8 leading-relaxed max-w-lg">
+               <p class="text-gray-300 mb-8 leading-relaxed max-w-lg">
                   I build responsive, high-performing websites using modern web
                   technologies.
                </p>
@@ -38,15 +38,15 @@ const common = useCommonStore();
                </div>
                <div class="flex flex-wrap gap-4">
                   <a href=""
-                     class="w-12 h-12 rounded-lg bg-black/5 hover:bg-purple-500/20 border border-purple-500/20 flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all hover:shadow-lg hover:shadow-purple-500/30">
+                     class="w-12 h-12 rounded-lg bg-black/5 hover:bg-purple-500/20 border border-purple-500/20 flex items-center justify-center text-gray-300 hover:text-purple-400 transition-all hover:shadow-lg hover:shadow-purple-500/30">
                      <Github />
                   </a>
                   <a href=""
-                     class="w-12 h-12 rounded-lg bg-black/5 hover:bg-purple-500/20 border border-purple-500/20 flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all hover:shadow-lg hover:shadow-purple-500/30">
+                     class="w-12 h-12 rounded-lg bg-black/5 hover:bg-purple-500/20 border border-purple-500/20 flex items-center justify-center text-gray-300 hover:text-purple-400 transition-all hover:shadow-lg hover:shadow-purple-500/30">
                      <Linkedin />
                   </a>
                   <a href=""
-                     class="w-12 h-12 rounded-lg bg-black/5 hover:bg-purple-500/20 border border-purple-500/20 flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all hover:shadow-lg hover:shadow-purple-500/30">
+                     class="w-12 h-12 rounded-lg bg-black/5 hover:bg-purple-500/20 border border-purple-500/20 flex items-center justify-center text-gray-300 hover:text-purple-400 transition-all hover:shadow-lg hover:shadow-purple-500/30">
                      <Facebook />
                   </a>
                </div>

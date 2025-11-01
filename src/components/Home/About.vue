@@ -1,5 +1,4 @@
 <script setup>
-import { ArrowDown } from "lucide-vue-next";
 import { useHomeStore } from "@/stores/home";
 
 const homeStore = useHomeStore();
@@ -11,10 +10,10 @@ const homeStore = useHomeStore();
       <div
          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-violet-600/10 rounded-full blur-3xl">
       </div>
-      <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-7xl mx-auto px-6 z-10">
          <!-- Section Title -->
          <div class="text-center mb-16" v-motion :initial="{ y: 20, opacity: 0 }"
-            :visible-once="{ y: 0, opacity: 1, transition: { duration: 800 } }">
+            :visible-once="{ y: 0, opacity: 1, transition: { duration: 600 } }">
             <h2
                class="text-4xl md:text-5xl bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">
                About Me
@@ -49,8 +48,8 @@ const homeStore = useHomeStore();
                :visible-once="{ x: 0, opacity: 1, transition: { duration: 600 } }">
                <!-- Skills -->
                <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-3  lg:grid-cols-4 gap-4">
-                  <div v-for="(skill, index) in homeStore.skills" v-motion :initial="{ x: 0, scale: 0.8 }"
-                     :visible-once="{ x: 0, scale: 1, transition: { duration: 300, delay: index * 50 } }"
+                  <div v-for="(skill, index) in homeStore.skills" v-motion :initial="{ opacity: 0, scale: 0.8 }"
+                     :visible-once="{ opacity: 1, scale: 1, transition: { duration: 300, delay: index * 100 } }"
                      class="p-4 bg-black/5 backdrop-blur-sm rounded-md shadow-md hover:shadow-lg shadow-purple-500/10 hover:shadow-purple-500/30 border border-purple-500/20 hover:border-purple-500/40 text-center group transition-all cursor-pointer">
                      <!-- Icon -->
                      <p class="text-3xl mb-3 group-hover:scale-110 transition-transform">
@@ -64,17 +63,17 @@ const homeStore = useHomeStore();
                   <div
                      class="bg-gradient-to-br from-purple-500/20 to-violet-500/20 backdrop-blur-sm border border-purple-500/30 rounded-md p-4 text-center">
                      <p class="text-3xl mb-1">4+</p>
-                     <p class="text-sm text-gray-400">Years Experience</p>
+                     <p class="text-sm text-gray-300">Years Experience</p>
                   </div>
                   <div
                      class="bg-gradient-to-br from-purple-500/20 to-violet-500/20 backdrop-blur-sm border border-purple-500/30 rounded-md p-4 text-center">
                      <p class="text-3xl mb-1">200+</p>
-                     <p class="text-sm text-gray-400">Projects Done</p>
+                     <p class="text-sm text-gray-300">Projects Done</p>
                   </div>
                   <div
                      class="bg-gradient-to-br from-purple-500/20 to-violet-500/20 backdrop-blur-sm border border-purple-500/30 rounded-md p-4 text-center">
                      <p class="text-3xl mb-1">100+</p>
-                     <p class="text-sm text-gray-400">Happy Clients</p>
+                     <p class="text-sm text-gray-300">Happy Clients</p>
                   </div>
                </div>
             </div>
