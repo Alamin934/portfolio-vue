@@ -9,8 +9,8 @@ let isWindowScroll = ref(false);
 function handleScroll() {
    isWindowScroll.value = window.scrollY > 20;
 }
-onMounted(() => window.addEventListener('scroll', handleScroll));
-onUnmounted(() => window.removeEventListener('scroll', handleScroll));
+onMounted(() => { window.addEventListener('scroll', handleScroll) });
+onUnmounted(() => { window.removeEventListener('scroll', handleScroll) });
 
 const common = useCommonStore();
 </script>

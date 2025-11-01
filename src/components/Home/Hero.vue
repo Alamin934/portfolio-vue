@@ -11,11 +11,12 @@ const common = useCommonStore();
       <div class="absolute bottom-20 left-20 w-96 h-96 bg-violet-600/20 rounded-full blur-3xl"></div>
 
       <div class="max-w-7xl mx-auto px-6 py-20 relative z-10">
-         <div class="grid md:grid-cols-2 gap-12 items-center">
+         <div class="grid md:grid-cols-2  gap-8 lg:gap-12 items-center">
             <!-- Left Item -->
-            <div v-motion :initial="{ opacity: 0, x: -50 }" :enter="{ opacity: 1, x: 0 }" :duration="800">
+            <div v-motion :initial="{ x: -50, opacity: 0 }"
+               :enter="{ x: 0, opacity: 1, transition: { duration: 800 } }">
                <p class="text-purple-400 mb-2">Hi, I'm Al-Amin</p>
-               <h1 class="text-5xl md:text-6xl mb-4 leading-18">
+               <h1 class="text-4xl sm:text-5xl lg:text-6xl mb-4 leading-11 sm:leading-14 lg:leading-18">
                   <span
                      class="bg-gradient-to-r from-purple-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">Wordpress
                      & Laravel</span>
@@ -51,8 +52,8 @@ const common = useCommonStore();
                </div>
             </div>
             <!-- Right Item -->
-            <div v-motion :initial="{ opacity: 0, x: 50 }" :enter="{ opacity: 1, x: 0 }" :duration="800" :delay="200"
-               class="relative flex justify-end items-center">
+            <div class="relative flex justify-end items-center" v-motion :initial="{ x: 50, opacity: 0 }"
+               :enter="{ x: 0, opacity: 1, transition: { delay: 200, duration: 800 } }">
                <div
                   class="relative inline-block border-2 border-purple-500/30 rounded-3xl shadow-2xl shadow-purple-500/20 overflow-hidden md:w-5/6 w-full h-auto">
                   <img class="relative z-10 w-full h-auto object-cover" alt="Hero Avatar"
