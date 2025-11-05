@@ -47,7 +47,7 @@ import { RouterLink } from 'vue-router';
             <span class="text-indigo-600 font-semibold ">Oops!</span> It seems like you've taken a wrong turn
          </h5>
          <RouterLink to="/"
-            class="inline-block cursor-pointer py-3 px-4 bg-purple-600 hover:bg-purple-700 rounded-md shadow-md shadow-purple-500/50 hover:shadow-purple-500/70 transition-all">
+            class="inline-block cursor-pointer py-3 px-4 bg-cyan-600 hover:bg-cyan-700 rounded-md shadow-md shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all">
             Back To Home</RouterLink>
       </div>
    </div>

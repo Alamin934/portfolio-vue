@@ -6,14 +6,14 @@ const homeStore = useHomeStore();
 <template>
    <section id="services" class="py-20 relative overflow-hidden">
       <!-- Background -->
-      <div class="absolute inset-0 bg-gradient-to-b from-[#0a0118] via-[#1a0a2e] to-[#0a0118]"></div>
-      <div class="absolute top-20 right-20 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#0c1a2e] to-[#020617]"></div>
+      <div class="absolute top-20 right-20 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl"></div>
 
       <div class="max-w-7xl mx-auto px-6 relative z-10">
          <div v-motion :initial="{ opacity: 0, y: 20 }"
             :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }" class="text-center mb-16">
             <h2 class="text-4xl md:text-5xl mb-4">
-               <span class="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">
+               <span class="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   What I Do
                </span>
             </h2>
@@ -27,14 +27,13 @@ const homeStore = useHomeStore();
                :initial="{ opacity: 0, y: 30 }"
                :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: index * 100 } }"
                class="group relative">
-
                <!-- Card -->
                <div
-                  class="bg-black/5 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-8 shadow-xl shadow-purple-500/10 hover:shadow-purple-500/20 transition-all h-full">
+                  class="bg-black/5 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-8 shadow-xl shadow-cyan-500/10 hover:shadow-cyan-500/20 transition-all h-full">
                   <!-- Icon -->
                   <div
-                     class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-600/20 to-violet-600/20 border border-purple-500/30 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-purple-500/50 transition-all duration-300">
-                     <component :is="service.icon" class="text-purple-400 w-7 h-7" />
+                     class="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-cyan-500/50 transition-all duration-300">
+                     <component :is="service.icon" class="text-cyan-400 w-7 h-7" />
                   </div>
 
                   <!-- Content -->
